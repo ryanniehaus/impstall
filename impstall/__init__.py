@@ -52,7 +52,7 @@ def _installWithPip(pipName, pythonExePath=eval('PYTHON_EXE_PATH'), getPipOpts=e
 
 	proxyArgs = []
 	if HTTPS_PROXY is not None:
-		proxyArgs.append(HTTPS_PROXY)
+		proxyArgs.append('--proxy='+HTTPS_PROXY)
 
 	if not pipAvail:
 		print 'Downloading pip installer:', _pipSetupUrl
