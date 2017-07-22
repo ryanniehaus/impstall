@@ -64,7 +64,6 @@ def _installWithPip(pipName, pythonExePath=eval('PYTHON_EXE_PATH'), getPipOpts=e
 		pipAvail = True
 	except ImportError:
 		pass
-	pipAvail=False
 
 	proxyArgs = []
 	if HTTP_PROXY is not None:
@@ -160,7 +159,6 @@ def impstall(module, items={}, pipPackage=None):
 		packageAlreadyInstalled = True
 	except ImportError:
 		pass
-	packageAlreadyInstalled=False
 
 	if not packageAlreadyInstalled:
 		if pipPackage is None:
